@@ -27,6 +27,19 @@ The framework is developed using **Java**, **Rest-Assured**, **TestNG**, **Jacks
 
 ---
 
+## ⚙️ Tech Stack
+- **Java 11+**
+- **IntelliJ IDEA** (IDE for development)
+- **Maven** (Build tool)
+- **Rest-Assured** (HTTP client for API automation)
+- **TestNG** (Testing framework)
+- **AssertJ** (Advanced assertions)
+- **Jackson** (Payload serialization & deserialization)
+- **Allure Reports** (Test reporting)
+- **Full Folder Structure** (Hybrid Framework)
+
+---
+
 ## 🏗️ Project Structure
 
 ### Root Level
@@ -76,19 +89,6 @@ The framework is developed using **Java**, **Rest-Assured**, **TestNG**, **Jacks
   - `TestE2EFlow` *# End-to-End booking workflow tests*
 - `com.avinashsinha.tests.sample`
   - `TestIntegrationSample`
-
----
-
-## ⚙️ Tech Stack
-- **Java 11+**
-- **IntelliJ IDEA** (IDE for development)
-- **Maven** (Build tool)
-- **Rest-Assured** (HTTP client for API automation)
-- **TestNG** (Testing framework)
-- **AssertJ** (Advanced assertions)
-- **Jackson** (Payload serialization & deserialization)
-- **Allure Reports** (Test reporting)
-- **Full Folder Structure** (Hybrid Framework)
 
 ---
 

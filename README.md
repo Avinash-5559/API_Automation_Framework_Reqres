@@ -98,23 +98,20 @@ com.avinashsinha.tests.sample
 
 ## ▶️ Running Tests
 
-Run specific TestNG suite:
-mvn clean test -DsuiteXmlFile=testng_Integration.xml
+### Integration Test (Create User, Details, Update and Delete User)
+
+`mvn clean test -DsuiteXmlFile=testng_Integration.xml`
 
 Available TestNG XMLs:
-- testng_sample.xml
+`testng_sample.xml`
 
 ---
 
 ## 📊 Reporting
 
-Generate Allure Report
+### Allure Report Generate
 
-1. Execute tests:
-   mvn clean test
-
-3. Generate Allure Report:
-   allure serve allure-results
+`allure serve allure-results`
 
 ![reqres](https://github.com/user-attachments/assets/714983f1-f2e6-451a-8978-eba361e77f0d)
 

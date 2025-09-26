@@ -36,7 +36,7 @@ com.avinashsinha.endpoints
 └── APIConstants # Base URLs and endpoint constants
 
 com.avinashsinha.modules
-└── PayloadManager # GSON-based payload builders
+└── PayloadManager # Jackson-based payload builders
 
 com.avinashsinha.pojos
 ├── DataResponse
@@ -83,7 +83,7 @@ com.avinashsinha.tests.sample
 - **Rest-Assured** (HTTP client for API automation)
 - **TestNG** (Testing framework)
 - **AssertJ** (Advanced assertions)
-- **GSON** (Payload serialization & deserialization)
+- **Jackson** (Payload serialization & deserialization)
 - **Allure Reports** (Test reporting)
 - **Full Folder Structure** (Hybrid Framework)
 

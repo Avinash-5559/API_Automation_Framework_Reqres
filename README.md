@@ -103,6 +103,7 @@ com.avinashsinha.tests.sample
 `mvn clean test -DsuiteXmlFile=testng_Integration.xml`
 
 Available TestNG XMLs:
+
 `testng_sample.xml`
 
 ---

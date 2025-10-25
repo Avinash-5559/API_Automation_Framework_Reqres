@@ -146,3 +146,5 @@ register.setPassword("pistol");
 ---
 ## 📌 Author
 👤 Avinash Sinha
+
+---

@@ -22,7 +22,8 @@ public class TestUserFullUpdate extends BaseTest {
 
         response = RestAssured.given(requestSpecification)
                 .pathParam("id", userId)
-                .when().body(payloadManager.fullUpdatePayloadUser())
+                .body(payloadManager.fullUpdatePayloadUser())
+                .when().log().all()
                 .put(APIConstants.USERS_ENDPOINT);
 
         validatableResponse = response.then().log().all().statusCode(200);

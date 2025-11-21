@@ -18,7 +18,8 @@ public class TestLoginUser_Negative extends BaseTest {
         requestSpecification.basePath(APIConstants.LOGIN);
 
         response = RestAssured.given(requestSpecification)
-                .when().body(payloadManager.loginPayloadUser_Negative())
+                .body(payloadManager.loginPayloadUser_Negative())
+                .when().log().all()
                 .post();
 
         validatableResponse = response.then().log().all().statusCode(400);

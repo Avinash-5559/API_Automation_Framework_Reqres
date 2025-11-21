@@ -22,7 +22,8 @@ public class TestUserPartialUpdate extends BaseTest {
 
         response = RestAssured.given(requestSpecification)
                 .pathParam("id", userId)
-                .when().body(payloadManager.partialUpdatePayloadUser())
+                .body(payloadManager.partialUpdatePayloadUser())
+                .when().log().all()
                 .patch(APIConstants.USERS_ENDPOINT);
 
         validatableResponse = response.then().log().all().statusCode(200);

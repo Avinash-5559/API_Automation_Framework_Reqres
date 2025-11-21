@@ -18,7 +18,8 @@ public class TestCreateUser extends BaseTest {
         requestSpecification.basePath(APIConstants.CRUD_OPER);
 
         response = RestAssured.given(requestSpecification)
-                .when().body(payloadManager.createPayloadUser())
+                .body(payloadManager.createPayloadUser())
+                .when().log().all()
                 .post();
 
         validatableResponse = response.then().log().all().statusCode(201);

@@ -18,7 +18,8 @@ public class TestE2EFlow extends BaseTest {
         requestSpecification.basePath(APIConstants.REGISTER);
 
         response = RestAssured.given(requestSpecification)
-                .when().body(payloadManager.registerPayloadUser_Positive())
+                .body(payloadManager.registerPayloadUser_Positive())
+                .when().log().all()
                 .post();
 
         validatableResponse = response.then().log().all().statusCode(200);
@@ -37,7 +38,8 @@ public class TestE2EFlow extends BaseTest {
         requestSpecification.basePath(APIConstants.LOGIN);
 
         response = RestAssured.given(requestSpecification)
-                .when().body(payloadManager.loginPayloadUser_Positive())
+                .body(payloadManager.loginPayloadUser_Positive())
+                .when().log().all()
                 .post();
 
         validatableResponse = response.then().log().all().statusCode(200);
@@ -56,7 +58,8 @@ public class TestE2EFlow extends BaseTest {
         requestSpecification.basePath(APIConstants.CRUD_OPER);
 
         response = RestAssured.given(requestSpecification)
-                .when().body(payloadManager.createPayloadUser())
+                .body(payloadManager.createPayloadUser())
+                .when().log().all()
                 .post();
 
         validatableResponse = response.then().log().all().statusCode(201);
@@ -149,7 +152,8 @@ public class TestE2EFlow extends BaseTest {
 
         response = RestAssured.given(requestSpecification)
                 .pathParam("id", userId)
-                .when().body(payloadManager.fullUpdatePayloadUser())
+                .body(payloadManager.fullUpdatePayloadUser())
+                .when().log().all()
                 .put(APIConstants.USERS_ENDPOINT);
 
         validatableResponse = response.then().log().all().statusCode(200);
@@ -182,7 +186,8 @@ public class TestE2EFlow extends BaseTest {
 
         response = RestAssured.given(requestSpecification)
                 .pathParam("id", userId)
-                .when().body(payloadManager.partialUpdatePayloadUser())
+                .body(payloadManager.partialUpdatePayloadUser())
+                .when().log().all()
                 .patch(APIConstants.USERS_ENDPOINT);
 
         validatableResponse = response.then().log().all().statusCode(200);

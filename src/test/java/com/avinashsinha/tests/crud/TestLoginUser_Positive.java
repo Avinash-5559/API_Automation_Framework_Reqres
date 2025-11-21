@@ -18,7 +18,8 @@ public class TestLoginUser_Positive extends BaseTest {
         requestSpecification.basePath(APIConstants.LOGIN);
 
         response = RestAssured.given(requestSpecification)
-                .when().body(payloadManager.loginPayloadUser_Positive())
+                .body(payloadManager.loginPayloadUser_Positive())
+                .when().log().all()
                 .post();
 
         validatableResponse = response.then().log().all().statusCode(200);

@@ -137,7 +137,6 @@ This will launch an interactive report in your browser.
 ---
 ## ✅ Example Payload with Jackson
 
-Example of booking payload creation using Jackson:
 ```java
 Register register = new Register();
 register.setEmail("eve.holt@reqres.in");

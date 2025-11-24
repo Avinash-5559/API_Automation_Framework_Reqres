@@ -50,41 +50,39 @@ The framework is developed using **Java**, **Rest-Assured**, **TestNG**, **Jacks
 ```bash
 API_Automation_Framework_Reqres/
 │
-├── .idea/                                         # (optional) IntelliJ configuration (git-ignored)
-├── allure-results/                                # Allure report results (generated after tests)
-├── pom.xml                                        # Maven dependencies
-├── testng_*.xml                                   # TestNG suite files
+├── .idea/                                             # (optional) IntelliJ configuration (git-ignored)
+├── allure-results/                                    # Allure report results (generated after tests)
+├── pom.xml                                            # Maven dependencies
+├── testng_*.xml                                       # TestNG suite files
 ├── .gitignore
 │
 ├── src/
 │   ├── main/java/com/avinashsinha/
-│   │   ├── endpoints/                             # API Endpoints & Constants
+│   │   ├── endpoints/                                 # API Endpoints & Constants
 │   │   │   └── APIConstants
 │   │   │
-│   │   ├── modules/                               # Payload Builders
+│   │   ├── modules/                                   # Payload Builders
 │   │   │   └── PayloadManager
 │   │   │
-│   │   └── pojos/                                 # Request/Response POJOs
+│   │   └── pojos/                                     # Request/Response POJOs
 │   │       ├── DataResponse
-│   │       ├── DetailsResponse
+│   │       ├── DetailResponse
 │   │       ├── Login
 │   │       ├── LoginResponse
-│   │       ├── Register
-│   │       ├── RegisterResponse
 │   │       ├── SupportResponse
 │   │       ├── UpdateResponse
 │   │       ├── UserResponse
 │   │       └── Users
 │   │
 │   └── test/java/com/avinashsinha/
-│       ├── asserts/                               # Custom Assertions
+│       ├── asserts/                                   # Custom Assertions
 │       │   └── AssertActions
 │       │
-│       ├── base/                                  # Base Test Setup
+│       ├── base/                                      # Base Test Setup
 │       │   └── BaseTest
 │       │
 │       └── tests/
-│           ├── crud/                              # CRUD Test Cases
+│           ├── crud/                                  # CRUD Test Cases
 │           │   ├── TestCreateUser
 │           │   ├── TestLoginUser_Negative
 │           │   ├── TestLoginUser_Positive
@@ -96,10 +94,10 @@ API_Automation_Framework_Reqres/
 │           │   ├── TestUserFullUpdate
 │           │   └── TestUserPartialUpdate
 │           │
-│           ├── integration/                       # Integration Test Cases
+│           ├── integration/                           # Integration Test Cases
 │           │   └── TestE2EFlow
 │           │
-│           └── sample/                            # Sample Tests
+│           └── sample/                                # Sample Tests
 │               └── TestIntegrationSample
 │
 └── README.md

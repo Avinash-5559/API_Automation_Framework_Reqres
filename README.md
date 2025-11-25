@@ -10,7 +10,8 @@
 
 ---
 
-## 🗂️ Overview  
+## 🗂️ Overview
+
 This project is an **API Automation Framework** built to test the [Reqres](https://reqres.in/) APIs.  
 
 The framework is developed using **Java**, **Rest-Assured**, **TestNG**, **Jackson** for payload management, **Allure** for reporting, and **IntelliJ IDEA** as the IDE.
@@ -50,55 +51,59 @@ The framework is developed using **Java**, **Rest-Assured**, **TestNG**, **Jacks
 ```bash
 API_Automation_Framework_Reqres/
 │
-├── .idea/                                             # (optional) IntelliJ configuration (git-ignored)
-├── allure-results/                                    # Allure report results (generated after tests)
-├── pom.xml                                            # Maven dependencies
-├── testng_*.xml                                       # TestNG suite files
-├── .gitignore
+├── .idea/                                                          # IntelliJ config
+├── .mvn/                                                           # Maven wrapper files
+├── allure-results/                                                 # Allure results (auto-generated)
 │
+├── pom.xml                                                         # Maven dependencies & build config
+├── testng_*.xml                                                    # TestNG suite files
+├── .gitignore
+|                                        
 ├── src/
-│   ├── main/java/com/avinashsinha/
-│   │   ├── endpoints/                                 # API Endpoints & Constants
-│   │   │   └── APIConstants
-│   │   │
-│   │   ├── modules/                                   # Payload Builders
-│   │   │   └── PayloadManager
-│   │   │
-│   │   └── pojos/                                     # Request/Response POJOs
-│   │       ├── DataResponse
-│   │       ├── DetailResponse
-│   │       ├── Login
-│   │       ├── LoginResponse
-│   │       ├── SupportResponse
-│   │       ├── UpdateResponse
-│   │       ├── UserResponse
-│   │       └── Users
+│   ├── main/
+│   │   └── java/
+│   │       ├── com.avinashsinha.endpoints/
+│   │       │   └── APIConstants.java                               # API Endpoints & Constants
+│   │       │
+│   │       ├── com.avinashsinha.modules/
+│   │       │   └── PayloadManager.java                             # Payload Builders
+│   │       │
+│   │       └── com.avinashsinha.pojos/                             # Request/Response POJOs
+│   │       	├── DataResponse.java
+│   │       	├── DetailResponse.java
+│   │       	├── Login.java
+│   │       	├── LoginResponse.java
+│   │       	├── SupportResponse.java
+│   │       	├── UpdateResponse.java
+│   │       	├── UserResponse.java
+│   │       	└── Users.java
 │   │
-│   └── test/java/com/avinashsinha/
-│       ├── asserts/                                   # Custom Assertions
-│       │   └── AssertActions
-│       │
-│       ├── base/                                      # Base Test Setup
-│       │   └── BaseTest
-│       │
-│       └── tests/
-│           ├── crud/                                  # CRUD Test Cases
-│           │   ├── TestCreateUser
-│           │   ├── TestLoginUser_Negative
-│           │   ├── TestLoginUser_Positive
-│           │   ├── TestRegisterUser_Negative
-│           │   ├── TestRegisterUser_Positive
-│           │   ├── TestUserDeletion
-│           │   ├── TestUserDetails
-│           │   ├── TestUserDetailsById
-│           │   ├── TestUserFullUpdate
-│           │   └── TestUserPartialUpdate
+│   └── test/
+│       └── java/
+│           ├── com.avinashsinha.asserts/
+│           │   └── AssertActions.java                              # Custom Assertions
 │           │
-│           ├── integration/                           # Integration Test Cases
-│           │   └── TestE2EFlow
+│           ├── com.avinashsinha.base/
+│           │   └── BaseTest.java                                   # Base Test Setup
 │           │
-│           └── sample/                                # Sample Tests
-│               └── TestIntegrationSample
+│           └── com.avinashsinha.tests/
+│               ├── crud/                                           # CRUD Test Cases
+│           	│   ├── TestCreateUser.java
+│           	│   ├── TestLoginUser_Negative.java
+│           	│   ├── TestLoginUser_Positive.java
+│           	│   ├── TestRegisterUser_Negative.java
+│           	│   ├── TestRegisterUser_Positive.java
+│           	│   ├── TestUserDeletion.java
+│           	│   ├── TestUserDetails.java
+│           	│   ├── TestUserDetailsById.java
+│           	│   ├── TestUserFullUpdate.java
+│           	│   └── TestUserPartialUpdate.java
+│           	│
+│           	├── integration/                                    # Integration Test Cases
+│           	│   └── TestE2EFlow.java
+│           	│
+│           	└── sample/                                         # Sample Tests
+│               	└── TestIntegrationSample.java
 │
 └── README.md
 ```
@@ -125,6 +130,7 @@ mvn clean test -DsuiteXmlFile=testng_Integration.xml
 
 ## 📊 Reporting
 ### Generate Allure Report
+
 ```bash
 allure serve allure-results
 ```

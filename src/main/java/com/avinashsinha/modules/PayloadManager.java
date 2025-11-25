@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class PayloadManager {
 
-    public String registerPayloadUser_Positive() {
+    public String registerUserRequest_Positive() {
 
         Register register = new Register();
 
@@ -42,7 +42,7 @@ public class PayloadManager {
         return registerResponse;
     }
 
-    public String registerPayloadUser_Negative() {
+    public String registerUserRequest_Negative() {
 
         Register register = new Register();
 
@@ -62,7 +62,7 @@ public class PayloadManager {
 
     }
 
-    public String loginPayloadUser_Positive() {
+    public String loginUserRequest_Positive() {
 
         Login login = new Login();
 
@@ -98,7 +98,7 @@ public class PayloadManager {
         return loginResponse;
     }
 
-    public String loginPayloadUser_Negative() {
+    public String loginUserRequest_Negative() {
 
         Login login = new Login();
 
@@ -118,7 +118,7 @@ public class PayloadManager {
 
     }
 
-    public String createPayloadUser() {
+    public String createUserRequest() {
 
         Users users = new Users();
 
@@ -199,7 +199,7 @@ public class PayloadManager {
         return supportResponse;
     }
 
-    public String fullUpdatePayloadUser() {
+    public String fullUpdateUserRequest() {
 
         Users users = new Users();
 
@@ -235,7 +235,7 @@ public class PayloadManager {
         return updateResponse;
     }
 
-    public String partialUpdatePayloadUser() {
+    public String partialUpdateUserRequest() {
 
         Users users = new Users();
 

@@ -18,7 +18,7 @@ public class TestE2EFlow extends BaseTest {
         requestSpecification.basePath(APIConstants.REGISTER);
 
         response = RestAssured.given(requestSpecification)
-                .body(payloadManager.registerPayloadUser_Positive())
+                .body(payloadManager.registerUserRequest_Positive())
                 .when().log().all()
                 .post();
 
@@ -38,7 +38,7 @@ public class TestE2EFlow extends BaseTest {
         requestSpecification.basePath(APIConstants.LOGIN);
 
         response = RestAssured.given(requestSpecification)
-                .body(payloadManager.loginPayloadUser_Positive())
+                .body(payloadManager.loginUserRequest_Positive())
                 .when().log().all()
                 .post();
 
@@ -58,7 +58,7 @@ public class TestE2EFlow extends BaseTest {
         requestSpecification.basePath(APIConstants.CRUD_OPER);
 
         response = RestAssured.given(requestSpecification)
-                .body(payloadManager.createPayloadUser())
+                .body(payloadManager.createUserRequest())
                 .when().log().all()
                 .post();
 
@@ -152,7 +152,7 @@ public class TestE2EFlow extends BaseTest {
 
         response = RestAssured.given(requestSpecification)
                 .pathParam("id", userId)
-                .body(payloadManager.fullUpdatePayloadUser())
+                .body(payloadManager.fullUpdateUserRequest())
                 .when().log().all()
                 .put(APIConstants.USERS_ENDPOINT);
 
@@ -186,7 +186,7 @@ public class TestE2EFlow extends BaseTest {
 
         response = RestAssured.given(requestSpecification)
                 .pathParam("id", userId)
-                .body(payloadManager.partialUpdatePayloadUser())
+                .body(payloadManager.partialUpdateUserRequest())
                 .when().log().all()
                 .patch(APIConstants.USERS_ENDPOINT);
 

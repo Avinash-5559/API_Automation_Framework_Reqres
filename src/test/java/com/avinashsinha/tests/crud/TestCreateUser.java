@@ -18,7 +18,7 @@ public class TestCreateUser extends BaseTest {
         requestSpecification.basePath(APIConstants.CRUD_OPER);
 
         response = RestAssured.given(requestSpecification)
-                .body(payloadManager.createPayloadUser())
+                .body(payloadManager.createUserRequest())
                 .when().log().all()
                 .post();
 

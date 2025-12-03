@@ -18,7 +18,7 @@ public class TestLoginUser_Positive extends BaseTest {
         requestSpecification.basePath(APIConstants.LOGIN);
 
         response = RestAssured.given(requestSpecification)
-                .body(payloadManager.loginPayloadUser_Positive())
+                .body(payloadManager.loginUserRequest_Positive())
                 .when().log().all()
                 .post();
 

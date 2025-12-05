@@ -18,7 +18,7 @@ public class TestRegisterUser_Negative extends BaseTest {
         requestSpecification.basePath(APIConstants.REGISTER);
 
         response = RestAssured.given(requestSpecification)
-                .body(payloadManager.registerPayloadUser_Negative())
+                .body(payloadManager.registerUserRequest_Negative())
                 .when().log().all()
                 .post();
 

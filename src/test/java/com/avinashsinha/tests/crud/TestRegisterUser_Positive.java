@@ -18,7 +18,7 @@ public class TestRegisterUser_Positive extends BaseTest {
         requestSpecification.basePath(APIConstants.REGISTER);
 
         response = RestAssured.given(requestSpecification)
-                .body(payloadManager.registerPayloadUser_Positive())
+                .body(payloadManager.registerUserRequest_Positive())
                 .when().log().all()
                 .post();
 

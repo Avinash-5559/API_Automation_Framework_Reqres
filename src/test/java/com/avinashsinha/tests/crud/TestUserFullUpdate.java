@@ -22,7 +22,7 @@ public class TestUserFullUpdate extends BaseTest {
 
         response = RestAssured.given(requestSpecification)
                 .pathParam("id", userId)
-                .body(payloadManager.fullUpdatePayloadUser())
+                .body(payloadManager.fullUpdateUserRequest())
                 .when().log().all()
                 .put(APIConstants.USERS_ENDPOINT);
 
